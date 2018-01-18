@@ -6,6 +6,13 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@page import="javax.servlet.http.HttpServletRequest"%>
+<%@page import="javax.servlet.http.HttpServletResponse"%>
+
+<%String username=(String)session.getAttribute("username");
+if(username==null){
+    response.sendRedirect("login.jsp");
+}%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -14,7 +21,7 @@
     <body>
         <%@include file="studentHeader.jsp" %>
         <center><h1>Student</h1></center>
-        <% String username=(String)session.getAttribute("username");
+        <% 
         String name=(String)session.getAttribute("name");
         String standard=(String)session.getAttribute("class");
         String phone=(String)session.getAttribute("phone");

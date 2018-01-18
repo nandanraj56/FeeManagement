@@ -3,6 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public final class accountant_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -12,8 +14,9 @@ public final class accountant_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List<String> _jspx_dependants;
 
   static {
-    _jspx_dependants = new java.util.ArrayList<String>(1);
+    _jspx_dependants = new java.util.ArrayList<String>(2);
     _jspx_dependants.add("/accountantHeader.jsp");
+    _jspx_dependants.add("/footer.jsp");
   }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -49,7 +52,13 @@ public final class accountant_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
+String username=(String)session.getAttribute("username");
+if(username==null){
+    response.sendRedirect("login.jsp");
+}
+      out.write("\n");
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
@@ -77,7 +86,7 @@ public final class accountant_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <li><a href=\"accountant.jsp\">Home</a></li>\n");
       out.write("                    <li><a href=\"accountantDeposit.jsp\">Money</a>\n");
       out.write("                    </li>\n");
-      out.write("                    <li><a href=\"detail.jsp\">View Student</a>\n");
+      out.write("                    <li><a href=\"detail.jsp\">View Students</a>\n");
       out.write("                        \n");
       out.write("                    </li>\n");
       out.write("                    <li><a href=\"logout.jsp\">Logout</a></li>\n");
@@ -94,7 +103,7 @@ public final class accountant_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("    <center><h1>Accountant</h1></center>\n");
       out.write("        ");
- String username=(String)session.getAttribute("username");
+ //String username=(String)session.getAttribute("username");
         String name=(String)session.getAttribute("name");
         
         String phone=(String)session.getAttribute("phone");
@@ -118,6 +127,40 @@ public final class accountant_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</h5><br>\n");
       out.write("                \n");
       out.write("        </div>\n");
+      out.write("    ");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<style>\n");
+      out.write("    .footer{\n");
+      out.write("        \n");
+      out.write("   position: fixed;\n");
+      out.write("   left: 0;\n");
+      out.write("   bottom: 0;\n");
+      out.write("   width: 100%;\n");
+      out.write("   \n");
+      out.write("   background-color: grey;\n");
+      out.write("   color: white;\n");
+      out.write("   text-align: center;\n");
+      out.write("   padding: 30px;\n");
+      out.write("\n");
+      out.write("    }\n");
+      out.write("    \n");
+      out.write("</style>\n");
+      out.write("<html>\n");
+      out.write("    <head>\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("        \n");
+      out.write("    </head>\n");
+      out.write("    <body>\n");
+      out.write("        <div class=\"footer\">\n");
+      out.write("            <p><h3>Project Made By: Nandan Raj</h3></p>\n");
+      out.write("            \n");
+      out.write("        </div>\n");
+      out.write("    </body>\n");
+      out.write("</html>\n");
+      out.write("\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

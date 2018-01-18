@@ -10,6 +10,13 @@
 <%@page import="java.sql.DriverManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@page import="javax.servlet.http.HttpServletRequest"%>
+<%@page import="javax.servlet.http.HttpServletResponse"%>
+
+<%String username=(String)session.getAttribute("username");
+if(username==null){
+    response.sendRedirect("login.jsp");
+}%>
 <style>
     table ,tr ,td,th{
         border: 1px solid black;
