@@ -1,0 +1,26 @@
+SMAP
+student_jsp.java
+JSP
+*S JSP
+*F
++ 0 student.jsp
+student.jsp
++ 1 studentHeader.jsp
+studentHeader.jsp
+*L
+5,11:49
+5#1,31:60
+15#0,3:90
+17,7:93
+23,3:100
+26:103,3
+27:106
+28:107,3
+29:110
+30:111,3
+31:114
+32:115,3
+33:118
+34:119,3
+35,6:122
+*E
